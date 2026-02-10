@@ -32,9 +32,9 @@
 </li>
 {{{ else }}}
 <li component="sidebar/search" class="visible-open nav-item mx-2 search">
-	<div class="d-flex gap-2 py-1 px-2 align-items-center" title="[[themes/harmony:login-register-to-search]]">
+	<div class="d-flex gap-2 py-1 px-2 align-items-center" title="[[themes/homebox:login-register-to-search]]">
 		<i class="fa fa-fw fa-search"></i>
-		<span class="nav-text visible-open text-xs">[[themes/harmony:login-register-to-search]]</span>
+		<span class="nav-text visible-open text-xs">[[themes/homebox:login-register-to-search]]</span>
 	</div>
 </li>
 {{{ end }}}

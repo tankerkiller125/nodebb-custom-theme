@@ -3,65 +3,65 @@
 
 	<div class="row m-0">
 		<div id="spy-container" class="col-12 col-md-8 px-0 mb-4" tabindex="0">
-			<form role="form" class="harmony-settings">
+			<form role="form" class="homebox-settings">
 				<div class="form-check form-switch">
 					<input type="checkbox" class="form-check-input" id="enableQuickReply" name="enableQuickReply" />
-					<label for="enableQuickReply" class="form-check-label">[[themes/harmony:settings.enableQuickReply]]</label>
+					<label for="enableQuickReply" class="form-check-label">[[themes/homebox:settings.enableQuickReply]]</label>
 				</div>
 				<div class="form-check form-switch">
 					<input type="checkbox" class="form-check-input" id="enableBreadcrumbs" name="enableBreadcrumbs" />
-					<label for="enableBreadcrumbs" class="form-check-label">[[themes/harmony:settings.enableBreadcrumbs]]</label>
-					<p class="form-text">[[themes/harmony:settings.enableBreadcrumbs.why]]</p>
+					<label for="enableBreadcrumbs" class="form-check-label">[[themes/homebox:settings.enableBreadcrumbs]]</label>
+					<p class="form-text">[[themes/homebox:settings.enableBreadcrumbs.why]]</p>
 				</div>
 				<div class="form-check form-switch">
 					<input type="checkbox" class="form-check-input" id="centerHeaderElements" name="centerHeaderElements" />
-					<label for="centerHeaderElements" class="form-check-label">[[themes/harmony:settings.centerHeaderElements]]</label>
+					<label for="centerHeaderElements" class="form-check-label">[[themes/homebox:settings.centerHeaderElements]]</label>
 				</div>
 				<div class="form-check form-switch">
 					<input type="checkbox" class="form-check-input" id="mobileTopicTeasers" name="mobileTopicTeasers" />
-					<label for="mobileTopicTeasers" class="form-check-label">[[themes/harmony:settings.mobileTopicTeasers]]</label>
+					<label for="mobileTopicTeasers" class="form-check-label">[[themes/homebox:settings.mobileTopicTeasers]]</label>
 				</div>
 				<div class="form-check form-switch">
 					<input type="checkbox" class="form-check-input" id="stickyToolbar" name="stickyToolbar" />
 					<div for="stickyToolbar" class="form-check-label">
-						[[themes/harmony:settings.stickyToolbar]]
+						[[themes/homebox:settings.stickyToolbar]]
 						<p class="form-text">
-							[[themes/harmony:settings.stickyToolbar.help]]
+							[[themes/homebox:settings.stickyToolbar.help]]
 						</p>
 					</div>
 				</div>
 				<div class="form-check form-switch">
 					<input type="checkbox" class="form-check-input" id="topicSidebarTools" name="topicSidebarTools" />
 					<div for="topicSidebarTools" class="form-check-label">
-						[[themes/harmony:settings.topicSidebarTools]]
+						[[themes/homebox:settings.topicSidebarTools]]
 						<p class="form-text">
-							[[themes/harmony:settings.topicSidebarTools.help]]
+							[[themes/homebox:settings.topicSidebarTools.help]]
 						</p>
 					</div>
 				</div>
 				<div class="form-check form-switch">
 					<input type="checkbox" class="form-check-input" id="autohideBottombar" name="autohideBottombar" />
 					<div for="autohideBottombar" class="form-check-label">
-						[[themes/harmony:settings.autohideBottombar]]
+						[[themes/homebox:settings.autohideBottombar]]
 						<p class="form-text">
-							[[themes/harmony:settings.autohideBottombar.help]]
+							[[themes/homebox:settings.autohideBottombar.help]]
 						</p>
 					</div>
 				</div>
 				<div class="form-check form-switch">
 					<input type="checkbox" class="form-check-input" id="topMobilebar" name="topMobilebar" />
 					<div for="topMobilebar" class="form-check-label">
-						[[themes/harmony:settings.topMobilebar]]
+						[[themes/homebox:settings.topMobilebar]]
 					</div>
 				</div>
 				<div class="form-check form-switch">
 					<input type="checkbox" class="form-check-input" id="openSidebars" name="openSidebars" />
-					<label for="openSidebars" class="form-check-label">[[themes/harmony:settings.openSidebars]]</label>
+					<label for="openSidebars" class="form-check-label">[[themes/homebox:settings.openSidebars]]</label>
 				</div>
 				<div class="form-check form-switch">
 					<input type="checkbox" class="form-check-input" id="chatModals" name="chatModals" />
 					<div for="chatModals" class="form-check-label">
-						[[themes/harmony:settings.chatModals]]
+						[[themes/homebox:settings.chatModals]]
 					</div>
 				</div>
 			</form>

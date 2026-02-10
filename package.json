@@ -1,14 +1,14 @@
 {
-  "name": "nodebb-theme-harmony",
+  "name": "nodebb-theme-homebox",
   "version": "2.2.7",
   "nbbpm": {
     "compatibility": "^4.0.0"
   },
-  "description": "Harmony theme for NodeBB",
+  "description": "Homebox theme for NodeBB",
   "main": "library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NodeBB/nodebb-theme-harmony"
+    "url": "https://github.com/tankerkiller125/nodebb-custom-theme"
   },
   "scripts": {
     "lint": "eslint .",
@@ -38,7 +38,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NodeBB/nodebb-theme-harmony/issues"
+    "url": "https://github.com/tankerkiller125/nodebb-custom-theme/issues"
   },
   "dependencies": {
     "@fontsource/inter": "5.2.8",
