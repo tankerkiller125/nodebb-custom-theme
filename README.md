@@ -1,7 +1,7 @@
-Harmony theme for NodeBB
+Homebox theme for NodeBB
 ====================
 
-The Harmony theme is the default theme for NodeBB for versions spanning v3.0.0 onwards.
+The Homebox theme is a custom theme for NodeBB.
 
 ## Issues
 

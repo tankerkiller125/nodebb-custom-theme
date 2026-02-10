@@ -1,13 +1,13 @@
 'use strict';
 
-define('admin/plugins/harmony', ['settings'], function (Settings) {
+define('admin/plugins/homebox', ['settings'], function (Settings) {
 	var ACP = {};
 
 	ACP.init = function () {
-		Settings.load('harmony', $('.harmony-settings'));
+		Settings.load('homebox', $('.homebox-settings'));
 
 		$('#save').on('click', function () {
-			Settings.save('harmony', $('.harmony-settings'));
+			Settings.save('homebox', $('.homebox-settings'));
 		});
 	};
 
