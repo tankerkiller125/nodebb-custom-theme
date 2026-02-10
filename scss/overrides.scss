@@ -81,6 +81,10 @@ $input-border-color: $gray-300 !default;
 $input-border-radius: 0.5rem !default;
 $input-focus-border-color: $green !default;
 
+// Homebox accent colors for tags
+$tag-bg-color: hsl(97, 37%, 93%) !default;
+$tag-text-color: hsl(97, 31%, 19%) !default;
+
 .form-control::placeholder, .bootstrap-tagsinput::placeholder {
 	color: $gray-500 !important;
 }

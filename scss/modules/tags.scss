@@ -1,7 +1,7 @@
 .tag-list {
 	.tag {
-		background-color: hsl(97, 37%, 93%)!important;
-		color: hsl(97, 31%, 19%)!important;
+		background-color: $tag-bg-color!important;
+		color: $tag-text-color!important;
 		border-radius: $border-radius;
 	}
 }
