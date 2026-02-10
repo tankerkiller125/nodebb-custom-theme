@@ -6,7 +6,7 @@ body[class*="template-account-"], .template-chats, .template-groups-details {
 }
 [component="brand/wrapper"] {
 	&:hover {
-		background-color: $card-cap-bg;
+		background-color: $gray-100;
 	}
 }
 
