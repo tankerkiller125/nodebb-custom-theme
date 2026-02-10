@@ -1,69 +1,184 @@
-.skin-quartz {
-	// $body-bg-image is gradient in quartz
-	[component="post"] .icon {
-		background-color: transparent !important;
+// Homebox Dark Mode Skin
+// Based on https://github.com/sysadminsmedia/homebox/blob/main/docs/src/styles/global.css
+// Applied when users select any dark Bootswatch skin (e.g., darkly)
+.skin-darkly {
+	$dark-bg: hsl(75, 14%, 10%);
+	$dark-bg-accent: hsl(75, 10%, 18%);
+	$dark-fg: hsl(60, 20%, 95%);
+	$dark-primary: hsl(139, 25%, 60%);
+	$dark-primary-fg: hsl(139, 16%, 10%);
+	$dark-muted: hsl(75, 10%, 18%);
+	$dark-muted-fg: hsl(60, 10%, 80%);
+	$dark-card: hsl(75, 14%, 12%);
+	$dark-border: hsl(75, 10%, 25%);
+	$dark-input: hsl(75, 10%, 25%);
+	$dark-sidebar: hsl(75, 14%, 8%);
+	$dark-destructive: hsl(0, 72%, 51%);
+
+	--bs-body-bg: #{$dark-bg};
+	--bs-body-color: #{$dark-fg};
+	--bs-border-color: #{$dark-border};
+	--bs-tertiary-bg: #{$dark-bg-accent};
+	--bs-secondary-bg: #{$dark-bg-accent};
+	--bs-link-color: #{$dark-primary};
+	--bs-link-hover-color: #{adjust-color($dark-primary, $lightness: 10%)};
+	--bs-emphasis-color: #{$dark-fg};
+
+	// Card styling
+	--bs-card-bg: #{$dark-card};
+	--bs-card-color: #{$dark-fg};
+	--bs-card-border-color: #{$dark-border};
+	--bs-card-cap-bg: #{$dark-bg-accent};
+	--bs-card-cap-color: #{$dark-fg};
+
+	// Form controls
+	--bs-form-control-bg: #{$dark-bg};
+
+	background-color: $dark-bg !important;
+	color: $dark-fg;
+
+	nav.sidebar, .bottombar-nav {
+		color: $dark-fg !important;
+		background-color: $dark-sidebar !important;
 	}
+	.bottombar-nav {
+		.dropdown-menu {
+			color: $dark-fg !important;
+			background-color: $dark-sidebar !important;
+		}
+	}
+
+	.card {
+		background-color: $dark-card;
+		border-color: $dark-border;
+		color: $dark-fg;
+	}
+
+	.bg-card-cap {
+		background-color: $dark-bg-accent !important;
+	}
+
+	.bg-body {
+		background-color: $dark-bg !important;
+	}
+
+	.bg-light {
+		background-color: $dark-bg-accent !important;
+	}
+
+	.text-dark {
+		color: $dark-fg !important;
+	}
+
+	.text-muted {
+		color: $dark-muted-fg !important;
+	}
+
+	.text-body {
+		color: $dark-fg !important;
+	}
+
+	.form-control, .form-select {
+		background-color: $dark-bg;
+		border-color: $dark-border;
+		color: $dark-fg;
+		&:focus {
+			background-color: $dark-bg;
+			border-color: $dark-primary;
+			color: $dark-fg;
+			box-shadow: 0 0 0 0.2rem rgba($dark-primary, 0.2);
+		}
+	}
+
 	.form-control::placeholder {
-		color:$gray-100!important;
+		color: $dark-muted-fg !important;
 	}
-	.position-sticky.bg-body {
-		background-color: transparent!important;
-		backdrop-filter: blur(5px);
-	}
-}
 
-.skin-solar {
-	.form-control::placeholder {
-		color:$gray-100!important;
+	.dropdown-menu {
+		background-color: $dark-card;
+		border-color: $dark-border;
+		color: $dark-fg;
+		.dropdown-item {
+			color: $dark-fg;
+			&:hover, &:focus {
+				background-color: $dark-bg-accent;
+				color: $dark-fg;
+			}
+		}
 	}
-}
 
-.skin-quartz, .skin-lux, .skin-morph {
-	// $spacer being modified looks bad on this element
-	.topic-list-header .btn, .topic-main-buttons .btn {
-		padding: 6px 12px;
+	.list-group-item {
+		background-color: $dark-card;
+		border-color: $dark-border;
+		color: $dark-fg;
 	}
-}
 
-.skin-yeti {
-	.badge {
-		padding-left: 0.5rem;
-		padding-right: 0.5rem;
+	.modal-content {
+		background-color: $dark-card;
+		border-color: $dark-border;
+		color: $dark-fg;
 	}
-}
 
-// table color fix, remove once https://github.com/thomaspark/bootswatch/issues/1276 is published
-.skin-darkly, .skin-superhero, .skin-solar, .skin-quartz {
+	.btn-light {
+		background-color: $dark-bg-accent;
+		border-color: $dark-border;
+		color: $dark-fg;
+	}
+
+	.text-bg-light {
+		background-color: $dark-bg-accent !important;
+		color: $dark-fg !important;
+	}
+
+	.border {
+		border-color: $dark-border !important;
+	}
+
+	.border-bottom {
+		border-color: $dark-border !important;
+	}
+
 	table > :not(caption) > * > * {
-		color: white;
+		color: $dark-fg;
 	}
-}
 
-.skin-superhero {
-	// fix read button in dropdowns
-	.mark-read .read {
-		color: $primary!important;
+	blockquote {
+		background-color: $dark-bg-accent !important;
+		color: $dark-fg !important;
 	}
-}
 
-.skin-slate {
-	// fix unread button colors in dropdowns
-	.mark-read .unread {
-		color: $secondary!important;
+	::-webkit-scrollbar {
+		background-color: $dark-bg;
 	}
-}
 
-.skin-morph {
-	.text-secondary {
-		color: #7b8ab8!important;
+	::-webkit-scrollbar-thumb {
+		background-color: rgba(255, 255, 255, 0.2);
 	}
-}
 
-:root {
-	.skin-darkly, .skin-slate, .skin-cyborg {
-		--bs-border-color: #929292;
+	::-webkit-scrollbar-track {
+		background-color: $dark-bg;
 	}
-	.skin-zephyr {
-		--bs-secondary-rgb: var(--bs-secondary-color);
+
+	::-webkit-scrollbar-thumb:hover {
+		background-color: rgba(255, 255, 255, 0.3);
+	}
+
+	// Unread titles use primary color
+	ul.topics-list, ul.categories-list {
+		li.unread .title {
+			color: $dark-primary !important;
+		}
+	}
+
+	// Pagination
+	[component="pagination"] {
+		.page-item.active:not(.disabled) .page-link {
+			color: $dark-fg;
+			background-color: $dark-bg-accent;
+			border-color: $dark-border;
+		}
+		.page-item:not(.disabled):hover .page-link {
+			color: $dark-fg;
+		}
 	}
 }
