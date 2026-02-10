@@ -1,6 +1,7 @@
 .tag-list {
 	.tag {
-		background-color: $gray-200!important;
-		color: $gray-700!important;
+		background-color: $tag-bg-color!important;
+		color: $tag-text-color!important;
+		border-radius: $border-radius;
 	}
 }
