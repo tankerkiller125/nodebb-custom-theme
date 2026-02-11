@@ -85,6 +85,12 @@
 	--bs-link-hover-color: #{adjust-color($dark-primary, $lightness: 10%)};
 	--bs-emphasis-color: #{$dark-fg};
 
+	// Bootstrap theme color overrides (prevents default blue from showing)
+	--bs-primary: #{$dark-primary};
+	--bs-primary-rgb: #{red($dark-primary)}, #{green($dark-primary)}, #{blue($dark-primary)};
+	--bs-success: #{$dark-primary};
+	--bs-success-rgb: #{red($dark-primary)}, #{green($dark-primary)}, #{blue($dark-primary)};
+
 	// Card styling
 	--bs-card-bg: #{$dark-card};
 	--bs-card-color: #{$dark-card-fg};
@@ -194,6 +200,73 @@
 		background-color: $dark-bg-accent;
 		border-color: $dark-border;
 		color: $dark-fg;
+	}
+
+	// Primary buttons - use green instead of Bootstrap default blue
+	.btn-primary, .btn-success {
+		--bs-btn-bg: #{$dark-primary};
+		--bs-btn-border-color: #{$dark-primary};
+		--bs-btn-hover-bg: #{adjust-color($dark-primary, $lightness: -10%)};
+		--bs-btn-hover-border-color: #{adjust-color($dark-primary, $lightness: -10%)};
+		--bs-btn-active-bg: #{adjust-color($dark-primary, $lightness: -15%)};
+		--bs-btn-active-border-color: #{adjust-color($dark-primary, $lightness: -15%)};
+		--bs-btn-disabled-bg: #{$dark-primary};
+		--bs-btn-disabled-border-color: #{$dark-primary};
+		color: $dark-primary-fg;
+	}
+
+	.btn-outline-primary, .btn-outline-success {
+		--bs-btn-color: #{$dark-primary};
+		--bs-btn-border-color: #{$dark-primary};
+		--bs-btn-hover-bg: #{$dark-primary};
+		--bs-btn-hover-border-color: #{$dark-primary};
+		--bs-btn-active-bg: #{$dark-primary};
+		--bs-btn-active-border-color: #{$dark-primary};
+	}
+
+	// Text/background utility overrides for primary/success
+	.text-primary, .text-success {
+		color: $dark-primary !important;
+	}
+
+	.bg-primary, .bg-success {
+		background-color: $dark-primary !important;
+	}
+
+	.text-bg-primary, .text-bg-success {
+		background-color: $dark-primary !important;
+		color: $dark-primary-fg !important;
+	}
+
+	// Nav pills / active links
+	.nav-pills .nav-link.active {
+		background-color: $dark-primary;
+		color: $dark-primary-fg;
+	}
+
+	// Badge overrides
+	.badge.bg-primary, .badge.text-bg-primary,
+	.badge.bg-success, .badge.text-bg-success {
+		background-color: $dark-primary !important;
+		color: $dark-primary-fg !important;
+	}
+
+	// Form check inputs (checkboxes, radios)
+	.form-check-input:checked {
+		background-color: $dark-primary;
+		border-color: $dark-primary;
+	}
+
+	// Progress bars
+	.progress-bar {
+		background-color: $dark-primary;
+	}
+
+	// Alert primary/success
+	.alert-primary, .alert-success {
+		--bs-alert-bg: #{rgba($dark-primary, 0.15)};
+		--bs-alert-border-color: #{rgba($dark-primary, 0.3)};
+		--bs-alert-color: #{$dark-primary};
 	}
 
 	.text-bg-light {
