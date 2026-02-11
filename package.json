@@ -12,6 +12,8 @@
   },
   "scripts": {
     "lint": "eslint .",
+    "build:css": "tailwindcss -i tailwind.css -o public/tailwind.css --minify",
+    "prepublishOnly": "npm run build:css",
     "publish:patch": "npm version patch && npm run publish:common",
     "publish:minor": "npm version minor && npm run publish:common",
     "publish:major": "npm version major && npm run publish:common",
@@ -21,7 +23,7 @@
     "nodebb",
     "theme",
     "forum",
-    "bootstrap",
+    "tailwindcss",
     "responsive"
   ],
   "contributors": [
@@ -42,9 +44,11 @@
   },
   "dependencies": {
     "@fontsource/inter": "5.2.8",
-    "@fontsource/poppins": "5.2.7"
+    "@fontsource/poppins": "5.2.7",
+    "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18",
     "eslint": "10.0.0",
     "eslint-config-nodebb": "^1.1.4"
   }

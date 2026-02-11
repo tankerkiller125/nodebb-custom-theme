@@ -77,7 +77,7 @@ body.template-topic {
 		&[data-collapsed="true"] {
 			> [component="post/parent/content"] > * {
 				font-size: 13px!important;
-				line-height: var(--bs-btn-line-height)!important;
+				line-height: 1.5!important;
 			}
 		}
 	}

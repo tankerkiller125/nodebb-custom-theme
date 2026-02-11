@@ -8,6 +8,9 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
+	font-family: $font-family-base;
+	color: $body-color;
+	background-color: $body-bg;
 }
 
 // Homebox-inspired scrollbar styling
@@ -47,7 +50,7 @@ body * {
 }
 
 hr {
-	border-top-color: var(--bs-border-color);
+	border-top-color: $border-color;
 	opacity: 1;
 }
 
@@ -69,7 +72,6 @@ hr {
 }
 
 .bg-card-cap {
-	--bs-bg-opacity: 1;
 	background-color: $card-cap-bg!important;
 }
 
@@ -83,7 +85,8 @@ hr {
 
 blockquote {
 	$bq-border-color: mix($light, $dark, 75%);
-	@extend .text-bg-light;
+	background-color: $light;
+	color: $body-color;
 	font-style: normal;
 	border-left: 2px solid $bq-border-color;
 	padding: 1rem;
@@ -128,13 +131,13 @@ body:not(.page-user) {
 }
 
 .markdown-highlight {
-	@extend .shadow-sm;
-	@extend .border;
+	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+	border: 1px solid $border-color;
 }
 
 [component="chat/message/body"], [component="post/content"] {
 	.img-fluid {
-		@extend .shadow-sm;
+		box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 		padding: $spacer * 0.5;
 		margin: $spacer * 0.5 0;
 		border: 1px solid $border-color;
@@ -190,4 +193,13 @@ body:not(.page-user) {
 .badge {
 	border-radius: $border-radius;
 	font-weight: $font-weight-semibold;
+}
+
+// Link styling
+a {
+	color: $link-color;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
 }

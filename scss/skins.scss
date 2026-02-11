@@ -1,6 +1,6 @@
 // Homebox Dark Mode Skin
 // Based on https://github.com/sysadminsmedia/homebox/blob/main/docs/src/styles/global.css
-// Applied when users select any dark Bootswatch skin (e.g., darkly)
+// Applied when users select the dark skin
 .skin-darkly {
 	$dark-bg: hsl(75, 14%, 10%);
 	$dark-bg-accent: hsl(75, 10%, 18%);
@@ -14,25 +14,6 @@
 	$dark-input: hsl(75, 10%, 25%);
 	$dark-sidebar: hsl(75, 14%, 8%);
 	$dark-destructive: hsl(0, 72%, 51%);
-
-	--bs-body-bg: #{$dark-bg};
-	--bs-body-color: #{$dark-fg};
-	--bs-border-color: #{$dark-border};
-	--bs-tertiary-bg: #{$dark-bg-accent};
-	--bs-secondary-bg: #{$dark-bg-accent};
-	--bs-link-color: #{$dark-primary};
-	--bs-link-hover-color: #{adjust-color($dark-primary, $lightness: 10%)};
-	--bs-emphasis-color: #{$dark-fg};
-
-	// Card styling
-	--bs-card-bg: #{$dark-card};
-	--bs-card-color: #{$dark-fg};
-	--bs-card-border-color: #{$dark-border};
-	--bs-card-cap-bg: #{$dark-bg-accent};
-	--bs-card-cap-color: #{$dark-fg};
-
-	// Form controls
-	--bs-form-control-bg: #{$dark-bg};
 
 	background-color: $dark-bg !important;
 	color: $dark-fg;
@@ -179,6 +160,14 @@
 		}
 		.page-item:not(.disabled):hover .page-link {
 			color: $dark-fg;
+		}
+	}
+
+	// Links
+	a {
+		color: $dark-primary;
+		&:hover {
+			color: adjust-color($dark-primary, $lightness: 10%);
 		}
 	}
 }

@@ -19,7 +19,8 @@
 	},
 	"staticDirs": {
 		"inter": "node_modules/@fontsource/inter/files",
-		"poppins": "node_modules/@fontsource/poppins/files"
+		"poppins": "node_modules/@fontsource/poppins/files",
+		"theme-assets": "public"
 	},
 	"languages": "languages"
 }

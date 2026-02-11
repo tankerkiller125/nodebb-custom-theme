@@ -4,6 +4,7 @@
 	<title>{browserTitle}</title>
 	{{{each metaTags}}}{function.buildMetaTag}{{{end}}}
 	<link rel="stylesheet" type="text/css" href="{relative_path}/assets/client{{{if bootswatchSkin}}}-{bootswatchSkin}{{{end}}}{{{ if (languageDirection=="rtl") }}}-rtl{{{ end }}}.css?{config.cache-buster}" />
+	<link rel="stylesheet" type="text/css" href="{relative_path}/plugins/nodebb-theme-homebox/theme-assets/tailwind.css?{config.cache-buster}" />
 	{{{each linkTags}}}{function.buildLinkTag}{{{end}}}
 
 	<script>
