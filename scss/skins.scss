@@ -1,20 +1,81 @@
 // Homebox Dark Mode Skin
 // Based on https://github.com/sysadminsmedia/homebox/blob/main/docs/src/styles/global.css
-// Applied when users select any dark Bootswatch skin (e.g., darkly)
+// Maps :root[data-theme="dark"] CSS custom properties to the darkly skin
 .skin-darkly {
 	$dark-bg: hsl(75, 14%, 10%);
 	$dark-bg-accent: hsl(75, 10%, 18%);
 	$dark-fg: hsl(60, 20%, 95%);
 	$dark-primary: hsl(139, 25%, 60%);
 	$dark-primary-fg: hsl(139, 16%, 10%);
+	$dark-secondary: hsl(76, 18%, 90%);
+	$dark-secondary-fg: hsl(77, 8%, 17%);
+	$dark-accent: hsl(97, 20%, 25%);
+	$dark-accent-fg: hsl(97, 30%, 90%);
 	$dark-muted: hsl(75, 10%, 18%);
 	$dark-muted-fg: hsl(60, 10%, 80%);
 	$dark-card: hsl(75, 14%, 12%);
+	$dark-card-fg: hsl(60, 20%, 95%);
+	$dark-popover: hsl(75, 14%, 12%);
+	$dark-popover-fg: hsl(60, 20%, 95%);
 	$dark-border: hsl(75, 10%, 25%);
 	$dark-input: hsl(75, 10%, 25%);
+	$dark-ring: hsl(139, 25%, 60%);
 	$dark-sidebar: hsl(75, 14%, 8%);
+	$dark-header: hsl(75, 14%, 8%);
+	$dark-header-fg: hsl(60, 20%, 95%);
 	$dark-destructive: hsl(0, 72%, 51%);
+	$dark-destructive-fg: hsl(0, 100%, 95%);
 
+	// Homebox documentation dark mode CSS custom properties
+	// Mirrors :root[data-theme="dark"] from global.css
+	--color-background: #{$dark-bg};
+	--color-background-accent: #{$dark-bg-accent};
+	--color-foreground: #{$dark-fg};
+	--color-primary: #{$dark-primary};
+	--color-primary-foreground: #{$dark-primary-fg};
+	--color-secondary: #{$dark-secondary};
+	--color-secondary-foreground: #{$dark-secondary-fg};
+	--color-accent: #{$dark-accent};
+	--color-accent-foreground: #{$dark-accent-fg};
+	--color-muted: #{$dark-muted};
+	--color-muted-foreground: #{$dark-muted-fg};
+	--color-card: #{$dark-card};
+	--color-card-foreground: #{$dark-card-fg};
+	--color-popover: #{$dark-popover};
+	--color-popover-foreground: #{$dark-popover-fg};
+	--color-destructive: #{$dark-destructive};
+	--color-destructive-foreground: #{$dark-destructive-fg};
+	--color-input: #{$dark-input};
+	--color-border: #{$dark-border};
+	--color-ring: #{$dark-ring};
+	--color-sidebar: #{$dark-sidebar};
+	--color-sidebar-foreground: #{$dark-fg};
+	--color-sidebar-primary: #{$dark-primary};
+	--color-sidebar-primary-foreground: #{$dark-primary-fg};
+	--color-sidebar-accent: #{$dark-bg-accent};
+	--color-sidebar-accent-foreground: #{$dark-fg};
+	--color-sidebar-border: #{$dark-border};
+	--color-sidebar-ring: #{$dark-border};
+	--color-header: #{$dark-header};
+	--color-header-foreground: #{$dark-header-fg};
+
+	// Dark mode gray palette (inverted for dark mode)
+	--color-gray-100: #{hsl(75, 18%, 8%)};
+	--color-gray-200: #{hsl(75, 14%, 14%)};
+	--color-gray-300: #{hsl(75, 10%, 21%)};
+	--color-gray-400: #{hsl(75, 6%, 45%)};
+	--color-gray-500: #{hsl(72, 5%, 65%)};
+	--color-gray-700: #{hsl(70, 6%, 85%)};
+	--color-gray-800: #{hsl(60, 10%, 92%)};
+	--color-gray-900: #{hsl(60, 15%, 97%)};
+
+	// Dark mode accent palette
+	--color-accent-200: #{hsl(139, 16%, 75%)};
+	--color-accent-600: #{hsl(139, 16%, 43%)};
+	--color-accent-900: #{hsl(139, 16%, 25%)};
+	--color-accent-950: #{hsl(139, 16%, 15%)};
+
+	// Bootstrap variable mappings
 	--bs-body-bg: #{$dark-bg};
 	--bs-body-color: #{$dark-fg};
 	--bs-border-color: #{$dark-border};
@@ -24,9 +85,15 @@
 	--bs-link-hover-color: #{adjust-color($dark-primary, $lightness: 10%)};
 	--bs-emphasis-color: #{$dark-fg};
 
+	// Bootstrap theme color overrides (prevents default blue from showing)
+	--bs-primary: #{$dark-primary};
+	--bs-primary-rgb: #{red($dark-primary)}, #{green($dark-primary)}, #{blue($dark-primary)};
+	--bs-success: #{$dark-primary};
+	--bs-success-rgb: #{red($dark-primary)}, #{green($dark-primary)}, #{blue($dark-primary)};
+
 	// Card styling
 	--bs-card-bg: #{$dark-card};
-	--bs-card-color: #{$dark-fg};
+	--bs-card-color: #{$dark-card-fg};
 	--bs-card-border-color: #{$dark-border};
 	--bs-card-cap-bg: #{$dark-bg-accent};
 	--bs-card-cap-color: #{$dark-fg};
@@ -36,6 +103,16 @@
 
 	background-color: $dark-bg !important;
 	color: $dark-fg;
+
+	// Dark olive header in dark mode
+	.brand-container {
+		background-color: $dark-header;
+		color: $dark-fg;
+
+		a, .btn, span {
+			color: $dark-fg !important;
+		}
+	}
 
 	nav.sidebar, .bottombar-nav {
 		color: $dark-fg !important;
@@ -125,6 +202,73 @@
 		color: $dark-fg;
 	}
 
+	// Primary buttons - use green instead of Bootstrap default blue
+	.btn-primary, .btn-success {
+		--bs-btn-bg: #{$dark-primary};
+		--bs-btn-border-color: #{$dark-primary};
+		--bs-btn-hover-bg: #{adjust-color($dark-primary, $lightness: -10%)};
+		--bs-btn-hover-border-color: #{adjust-color($dark-primary, $lightness: -10%)};
+		--bs-btn-active-bg: #{adjust-color($dark-primary, $lightness: -15%)};
+		--bs-btn-active-border-color: #{adjust-color($dark-primary, $lightness: -15%)};
+		--bs-btn-disabled-bg: #{$dark-primary};
+		--bs-btn-disabled-border-color: #{$dark-primary};
+		color: $dark-primary-fg;
+	}
+
+	.btn-outline-primary, .btn-outline-success {
+		--bs-btn-color: #{$dark-primary};
+		--bs-btn-border-color: #{$dark-primary};
+		--bs-btn-hover-bg: #{$dark-primary};
+		--bs-btn-hover-border-color: #{$dark-primary};
+		--bs-btn-active-bg: #{$dark-primary};
+		--bs-btn-active-border-color: #{$dark-primary};
+	}
+
+	// Text/background utility overrides for primary/success
+	.text-primary, .text-success {
+		color: $dark-primary !important;
+	}
+
+	.bg-primary, .bg-success {
+		background-color: $dark-primary !important;
+	}
+
+	.text-bg-primary, .text-bg-success {
+		background-color: $dark-primary !important;
+		color: $dark-primary-fg !important;
+	}
+
+	// Nav pills / active links
+	.nav-pills .nav-link.active {
+		background-color: $dark-primary;
+		color: $dark-primary-fg;
+	}
+
+	// Badge overrides
+	.badge.bg-primary, .badge.text-bg-primary,
+	.badge.bg-success, .badge.text-bg-success {
+		background-color: $dark-primary !important;
+		color: $dark-primary-fg !important;
+	}
+
+	// Form check inputs (checkboxes, radios)
+	.form-check-input:checked {
+		background-color: $dark-primary;
+		border-color: $dark-primary;
+	}
+
+	// Progress bars
+	.progress-bar {
+		background-color: $dark-primary;
+	}
+
+	// Alert primary/success
+	.alert-primary, .alert-success {
+		--bs-alert-bg: #{rgba($dark-primary, 0.15)};
+		--bs-alert-border-color: #{rgba($dark-primary, 0.3)};
+		--bs-alert-color: #{$dark-primary};
+	}
+
 	.text-bg-light {
 		background-color: $dark-bg-accent !important;
 		color: $dark-fg !important;
@@ -145,6 +289,33 @@
 	blockquote {
 		background-color: $dark-bg-accent !important;
 		color: $dark-fg !important;
+	}
+
+	// Nova-inspired dark mode inline code styling
+	[component="chat/message/body"],
+	[component="post/content"],
+	[component="topic/teaser"] .post-content,
+	[component="category/posts"] .post-content,
+	.post-queue.posts-list .post-content {
+		code:not(pre code) {
+			background-color: $dark-bg-accent;
+			border-color: $dark-border;
+			color: $dark-fg;
+		}
+	}
+
+	// Dark mode code blocks
+	.markdown-highlight {
+		border-color: $dark-border !important;
+
+		pre {
+			background-color: $dark-card !important;
+		}
+	}
+
+	// Dark mode scrollbar
+	* {
+		scrollbar-color: rgba(255, 255, 255, 0.2) $dark-bg;
 	}
 
 	::-webkit-scrollbar {
