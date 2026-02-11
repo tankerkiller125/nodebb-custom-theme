@@ -1,22 +1,81 @@
 // Homebox Dark Mode Skin
 // Based on https://github.com/sysadminsmedia/homebox/blob/main/docs/src/styles/global.css
-// Applied when users select any dark Bootswatch skin (e.g., darkly)
+// Maps :root[data-theme="dark"] CSS custom properties to the darkly skin
 .skin-darkly {
 	$dark-bg: hsl(75, 14%, 10%);
 	$dark-bg-accent: hsl(75, 10%, 18%);
 	$dark-fg: hsl(60, 20%, 95%);
 	$dark-primary: hsl(139, 25%, 60%);
 	$dark-primary-fg: hsl(139, 16%, 10%);
+	$dark-secondary: hsl(76, 18%, 90%);
+	$dark-secondary-fg: hsl(77, 8%, 17%);
+	$dark-accent: hsl(97, 20%, 25%);
+	$dark-accent-fg: hsl(97, 30%, 90%);
 	$dark-muted: hsl(75, 10%, 18%);
 	$dark-muted-fg: hsl(60, 10%, 80%);
 	$dark-card: hsl(75, 14%, 12%);
 	$dark-card-fg: hsl(60, 20%, 95%);
+	$dark-popover: hsl(75, 14%, 12%);
+	$dark-popover-fg: hsl(60, 20%, 95%);
 	$dark-border: hsl(75, 10%, 25%);
 	$dark-input: hsl(75, 10%, 25%);
+	$dark-ring: hsl(139, 25%, 60%);
 	$dark-sidebar: hsl(75, 14%, 8%);
 	$dark-header: hsl(75, 14%, 8%);
+	$dark-header-fg: hsl(60, 20%, 95%);
 	$dark-destructive: hsl(0, 72%, 51%);
+	$dark-destructive-fg: hsl(0, 100%, 95%);
 
+	// Homebox documentation dark mode CSS custom properties
+	// Mirrors :root[data-theme="dark"] from global.css
+	--color-background: #{$dark-bg};
+	--color-background-accent: #{$dark-bg-accent};
+	--color-foreground: #{$dark-fg};
+	--color-primary: #{$dark-primary};
+	--color-primary-foreground: #{$dark-primary-fg};
+	--color-secondary: #{$dark-secondary};
+	--color-secondary-foreground: #{$dark-secondary-fg};
+	--color-accent: #{$dark-accent};
+	--color-accent-foreground: #{$dark-accent-fg};
+	--color-muted: #{$dark-muted};
+	--color-muted-foreground: #{$dark-muted-fg};
+	--color-card: #{$dark-card};
+	--color-card-foreground: #{$dark-card-fg};
+	--color-popover: #{$dark-popover};
+	--color-popover-foreground: #{$dark-popover-fg};
+	--color-destructive: #{$dark-destructive};
+	--color-destructive-foreground: #{$dark-destructive-fg};
+	--color-input: #{$dark-input};
+	--color-border: #{$dark-border};
+	--color-ring: #{$dark-ring};
+	--color-sidebar: #{$dark-sidebar};
+	--color-sidebar-foreground: #{$dark-fg};
+	--color-sidebar-primary: #{$dark-primary};
+	--color-sidebar-primary-foreground: #{$dark-primary-fg};
+	--color-sidebar-accent: #{$dark-bg-accent};
+	--color-sidebar-accent-foreground: #{$dark-fg};
+	--color-sidebar-border: #{$dark-border};
+	--color-sidebar-ring: #{$dark-border};
+	--color-header: #{$dark-header};
+	--color-header-foreground: #{$dark-header-fg};
+
+	// Dark mode gray palette (inverted for dark mode)
+	--color-gray-100: #{hsl(75, 18%, 8%)};
+	--color-gray-200: #{hsl(75, 14%, 14%)};
+	--color-gray-300: #{hsl(75, 10%, 21%)};
+	--color-gray-400: #{hsl(75, 6%, 45%)};
+	--color-gray-500: #{hsl(72, 5%, 65%)};
+	--color-gray-700: #{hsl(70, 6%, 85%)};
+	--color-gray-800: #{hsl(60, 10%, 92%)};
+	--color-gray-900: #{hsl(60, 15%, 97%)};
+
+	// Dark mode accent palette
+	--color-accent-200: #{hsl(139, 16%, 75%)};
+	--color-accent-600: #{hsl(139, 16%, 43%)};
+	--color-accent-900: #{hsl(139, 16%, 25%)};
+	--color-accent-950: #{hsl(139, 16%, 15%)};
+
+	// Bootstrap variable mappings
 	--bs-body-bg: #{$dark-bg};
 	--bs-body-color: #{$dark-fg};
 	--bs-border-color: #{$dark-border};

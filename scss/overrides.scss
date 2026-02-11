@@ -96,6 +96,59 @@ $input-focus-border-color: $green !default;
 $tag-bg-color: hsl(97, 37%, 93%) !default;
 $tag-text-color: hsl(97, 31%, 19%) !default;
 
+// Homebox documentation light mode CSS custom properties
+// Mirrors :root / @theme from global.css
+:root {
+	--color-background: #{$white};
+	--color-background-accent: #{$gray-300};
+	--color-foreground: #{$gray-800};
+	--color-primary: #{$green};
+	--color-primary-foreground: #{hsl(139, 100%, 89%)};
+	--color-secondary: #{$secondary-olive};
+	--color-secondary-foreground: #{hsl(76, 18%, 83%)};
+	--color-accent: #{$tag-bg-color};
+	--color-accent-foreground: #{$tag-text-color};
+	--color-muted: #{hsl(0, 0%, 90%)};
+	--color-muted-foreground: #{$gray-600};
+	--color-card: #{$white};
+	--color-card-foreground: #{$gray-800};
+	--color-popover: #{$white};
+	--color-popover-foreground: #{$gray-800};
+	--color-destructive: #{hsl(0, 91%, 71%)};
+	--color-destructive-foreground: #{hsl(0, 100%, 14%)};
+	--color-input: #{$gray-300};
+	--color-border: #{$gray-300};
+	--color-ring: #{$green};
+	--color-sidebar: #{$sidebar-bg};
+	--color-sidebar-foreground: #{$gray-800};
+	--color-sidebar-primary: #{$green};
+	--color-sidebar-primary-foreground: #{hsl(139, 100%, 89%)};
+	--color-sidebar-accent: #{hsl(0, 0%, 90%)};
+	--color-sidebar-accent-foreground: #{$gray-800};
+	--color-sidebar-border: #{$gray-300};
+	--color-sidebar-ring: #{$gray-300};
+	--color-header: #{$header-bg};
+	--color-header-foreground: #{$header-color};
+
+	// Light mode gray palette
+	--color-gray-100: #{$gray-100};
+	--color-gray-200: #{$gray-200};
+	--color-gray-300: #{$gray-400};
+	--color-gray-400: #{$gray-500};
+	--color-gray-500: #{$gray-700};
+	--color-gray-700: #{hsl(75, 14%, 14%)};
+	--color-gray-800: #{hsl(75, 14%, 10%)};
+	--color-gray-900: #{hsl(75, 18%, 8%)};
+
+	// Accent palette
+	--color-accent-200: #{hsl(139, 16%, 75%)};
+	--color-accent-600: #{hsl(139, 16%, 43%)};
+	--color-accent-900: #{hsl(139, 16%, 25%)};
+	--color-accent-950: #{hsl(139, 16%, 15%)};
+
+	--radius: 0.5rem;
+}
+
 .form-control::placeholder, .bootstrap-tagsinput::placeholder {
 	color: $gray-500 !important;
 }
