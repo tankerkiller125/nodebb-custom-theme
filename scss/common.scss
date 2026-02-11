@@ -8,9 +8,17 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
+	// Prevent adjustments of font size after orientation changes in iOS
+	-webkit-text-size-adjust: 100%;
 }
 
 // Homebox-inspired scrollbar styling
+// Use thin scrollbar for Firefox, webkit styles for Chrome/Safari
+* {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(0,0,0,.2) $gray-100;
+}
+
 ::-webkit-scrollbar {
 	width: 0.3em;
 	background-color: $gray-100;
@@ -127,9 +135,17 @@ body:not(.page-user) {
 	}
 }
 
+// Nova-inspired code block styling
 .markdown-highlight {
 	@extend .shadow-sm;
 	@extend .border;
+	border-radius: $border-radius;
+	overflow: hidden;
+
+	pre {
+		border-radius: $border-radius;
+		margin-bottom: 0;
+	}
 }
 
 [component="chat/message/body"], [component="post/content"] {
@@ -150,7 +166,19 @@ body:not(.page-user) {
 [component="topic/teaser"] .post-content,
 [component="category/posts"] .post-content,
 .post-queue.posts-list .post-content {
-	a { text-decoration: underline;}
+	// Nova-inspired link styling
+	a {
+		text-decoration: underline;
+		text-underline-offset: 0.25em;
+	}
+
+	// Nova-inspired inline code styling
+	code:not(pre code) {
+		border-radius: 0.25rem;
+		border: 1px solid $gray-300;
+		padding: 0.125rem 0.25rem;
+		font-size: $small-font-size;
+	}
 }
 
 // Homebox-inspired button styling

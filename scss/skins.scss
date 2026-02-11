@@ -10,9 +10,11 @@
 	$dark-muted: hsl(75, 10%, 18%);
 	$dark-muted-fg: hsl(60, 10%, 80%);
 	$dark-card: hsl(75, 14%, 12%);
+	$dark-card-fg: hsl(60, 20%, 95%);
 	$dark-border: hsl(75, 10%, 25%);
 	$dark-input: hsl(75, 10%, 25%);
 	$dark-sidebar: hsl(75, 14%, 8%);
+	$dark-header: hsl(75, 14%, 8%);
 	$dark-destructive: hsl(0, 72%, 51%);
 
 	--bs-body-bg: #{$dark-bg};
@@ -26,7 +28,7 @@
 
 	// Card styling
 	--bs-card-bg: #{$dark-card};
-	--bs-card-color: #{$dark-fg};
+	--bs-card-color: #{$dark-card-fg};
 	--bs-card-border-color: #{$dark-border};
 	--bs-card-cap-bg: #{$dark-bg-accent};
 	--bs-card-cap-color: #{$dark-fg};
@@ -36,6 +38,16 @@
 
 	background-color: $dark-bg !important;
 	color: $dark-fg;
+
+	// Dark olive header in dark mode
+	.brand-container {
+		background-color: $dark-header;
+		color: $dark-fg;
+
+		a, .btn, span {
+			color: $dark-fg !important;
+		}
+	}
 
 	nav.sidebar, .bottombar-nav {
 		color: $dark-fg !important;
@@ -145,6 +157,33 @@
 	blockquote {
 		background-color: $dark-bg-accent !important;
 		color: $dark-fg !important;
+	}
+
+	// Nova-inspired dark mode inline code styling
+	[component="chat/message/body"],
+	[component="post/content"],
+	[component="topic/teaser"] .post-content,
+	[component="category/posts"] .post-content,
+	.post-queue.posts-list .post-content {
+		code:not(pre code) {
+			background-color: $dark-bg-accent;
+			border-color: $dark-border;
+			color: $dark-fg;
+		}
+	}
+
+	// Dark mode code blocks
+	.markdown-highlight {
+		border-color: $dark-border !important;
+
+		pre {
+			background-color: $dark-card !important;
+		}
+	}
+
+	// Dark mode scrollbar
+	* {
+		scrollbar-color: rgba(255, 255, 255, 0.2) $dark-bg;
 	}
 
 	::-webkit-scrollbar {

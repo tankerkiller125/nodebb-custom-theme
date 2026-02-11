@@ -4,9 +4,20 @@ body[class*="template-account-"], .template-chats, .template-groups-details {
 		display: none!important;
 	}
 }
+
+// Homebox docs-inspired dark olive header with light text
+.brand-container {
+	background-color: $header-bg;
+	color: $header-color;
+
+	a, .btn, span {
+		color: $header-color !important;
+	}
+}
+
 [component="brand/wrapper"] {
 	&:hover {
-		background-color: $gray-100;
+		background-color: rgba(255, 255, 255, 0.1);
 	}
 }
 

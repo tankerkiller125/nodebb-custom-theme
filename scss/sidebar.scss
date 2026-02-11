@@ -1,13 +1,13 @@
 .skin-noskin {
-	// Homebox-style sidebar colors when no bootswatch skin applied
+	// Homebox docs-inspired sidebar colors
 	nav.sidebar, .bottombar-nav {
 		color: $gray-800 !important;
-		background-color: $gray-100 !important;
+		background-color: $sidebar-bg !important;
 	}
 	.bottombar-nav {
 		.dropdown-menu {
 			color: $gray-800 !important;
-			background-color: $gray-100 !important;
+			background-color: $sidebar-bg !important;
 		}
 	}
 }
