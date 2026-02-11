@@ -1,6 +1,6 @@
 // only overrides to bs5 variables here
 
-// Homebox documentation-inspired warm/olive-tinted grey palette
+// Homebox documentation-inspired warm/olive-tinted gray palette
 // Based on https://github.com/sysadminsmedia/homebox/blob/main/docs/src/styles/global.css
 $white:    hsl(0, 0%, 100%) !default;
 $gray-100: hsl(60, 3%, 96%) !default;    // --color-gray-100
@@ -58,6 +58,10 @@ $enable-caret: false;
 $enable-smooth-scroll: false;
 
 $enable-shadows: true;
+
+// Lower contrast ratio threshold so Bootstrap can resolve contrast for our mid-tone
+// primary green hsl(139,16%,43%). White achieves 4.47:1 which is just under 4.5.
+$min-contrast-ratio: 3.5;
 
 $link-decoration: none;
 $link-hover-decoration: underline;
